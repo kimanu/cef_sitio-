@@ -1,1 +1,26 @@
 // Estos son los estilos del header
+.main_head {
+background:url(../img/bar_top.jpg) no-repeat;
+background-size:102% 102%;
+background-position:0 -1px;
+height:100px;
+}
+
+.wrapper {
+width:900px;
+margin:0 auto;
+}
+
+.logo {
+float:left;
+margin:5px 0 0 70px;
+}
+
+.logo a {
+display:inline-block;
+text-indent:-9999px;
+width:83px;
+height:90px;
+background:url(../img/logo.png);
+background-size:100% 100%;
+}
