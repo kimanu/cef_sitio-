@@ -30,7 +30,7 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="cuestionario.html"> Diagnostico</a></li>
+                        <li><a href="cuestionario.php"> Diagnostico</a></li>
                         <li><a href="http://www.cef.mx/blog/"> Blog</a></li>
                         <li><a href="servicios.html">Servicios</a>
                         <li> <a href="contacto.php"> Contacto</a></li>
