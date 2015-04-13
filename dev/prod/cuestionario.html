@@ -42,6 +42,67 @@
                     </ul>
                 </div>
             </nav>
+             <?php
+                        if (isset($_POST['enviar'])) {
+                        $email = 'kim_kula@hotmail.com';
+                        /*$email = 'sinnerei@gmail.com';*/
+                        $subject = "Cuestionario";
+                        $mensaje.= 'Datos' . "\n\n";
+                        $mensaje.= 'Nombre de la empresa: ' . $_POST['empresa'] . "\n";
+                        $mensaje.= 'Nombre del participante: ' . $_POST['participante'] . "\n";
+                        $mensaje.= 'Cargo en la empresa: ' . $_POST['cargo'] . "\n";
+                        $mensaje.= 'Giro comercial: ' . $_POST['giro'] . "\n";
+                        $mensaje.= 'Domicilio: ' . $_POST['domicilio'] . "\n";
+                        $mensaje.= 'Número telefónico: ' . $_POST['tel'] . "\n";
+                        $mensaje.= 'Correo electrónico: ' . $_POST['mail'] . "\n";
+                        $mensaje.= "\n\n";
+                        $mensaje.= 'Respuestas del cuestionario' . "\n\n";
+                        $mensaje.= 'Pregunta 1: ' . $_POST['question1'] . "\n";
+                        $mensaje.= 'Pregunta 2: ' . $_POST['question2'] . "\n";
+                        $mensaje.= 'Pregunta 3: ' . $_POST['question3'] . "\n";
+                        $mensaje.= 'Pregunta 4: ' . $_POST['question4'] . "\n";
+                        $mensaje.= 'Pregunta 5: ' . $_POST['question5'] . "\n";
+                        $mensaje.= 'Pregunta 6: ' . $_POST['question6'] . "\n";
+                        $mensaje.= 'Pregunta 7: ' . $_POST['question7'] . "\n";
+                        $mensaje.= 'Pregunta 8: ' . $_POST['question8'] . "\n";
+                        $mensaje.= 'Pregunta 9: ' . $_POST['question9'] . "\n";
+                        $mensaje.= 'Pregunta 10: ' . $_POST['question10'] . "\n";
+                        $mensaje.= 'Pregunta 11: ' . $_POST['question11'] . "\n";
+                        $mensaje.= 'Pregunta 12: ' . $_POST['question12'] . "\n";
+                        $mensaje.= 'Pregunta 13: ' . $_POST['question13'] . "\n";
+                        $mensaje.= 'Pregunta 14: ' . $_POST['question14'] . "\n";
+                        $mensaje.= 'Pregunta 15: ' . $_POST['question15'] . "\n";
+                        $mensaje.= 'Pregunta 16: ' . $_POST['question16'] . "\n";
+                        $mensaje.= 'Pregunta 17: ' . $_POST['question17'] . "\n";
+                        $mensaje.= 'Pregunta 18: ' . $_POST['question18'] . "\n";
+                        $mensaje.= 'Pregunta 19: ' . $_POST['question19'] . "\n";
+                        $mensaje.= 'Pregunta 20: ' . $_POST['question20'] . "\n";
+                        $mensaje.= 'Pregunta 21: ' . $_POST['question21'] . "\n";
+                        $mensaje.= 'Pregunta 22: ' . $_POST['question22'] . "\n";
+                        $mensaje.= 'Pregunta 23: ' . $_POST['question23'] . "\n";
+                        $mensaje.= 'Pregunta 24: ' . $_POST['question24'] . "\n";
+                        $mensaje.= 'Pregunta 25: ' . $_POST['question25'] . "\n";
+                        $mensaje.= 'Pregunta 26: ' . $_POST['question26'] . "\n";
+                        $mensaje.= 'Pregunta 27: ' . $_POST['question27'] . "\n";
+                        $mensaje.= 'Pregunta 28: ' . $_POST['question28'] . "\n";
+                        $mensaje.= 'Pregunta 29: ' . $_POST['question29'] . "\n";
+
+                        $headers = 'De: '.$_POST['participante'];
+                        if (mail($email, $subject, $mensaje, $headers)) { ?>
+                        <script>
+                        function redireccionar() { document.location.href='cuestionario1.php' }
+                        alert ("Mensaje enviado");
+                        setTimeout ('redireccionar()', 100);
+                        </script>
+                        <?php }
+                        else { ?>
+                        <script>
+                        function redireccionar() { document.location.href='cuestionario1.php' }
+                        alert ("El mensaje no pudo ser enviado");
+                        setTimeout ('redireccionar()', 100);
+                        </script>
+                        <?php }
+                    } else {?>
             <form class="cuestionario" name="datos" method="POST" action="">
      <fieldset class="bdata">
           <legend><h1>Datos de la empresa</h1></legend>
@@ -145,13 +206,23 @@
                     <p class="question"><label>¿El fundador está seguro de la conformidad de sus sucesores al transferir su patrimonio?</label><br></p>
                     <p class="answer"><input type="number" required="" min="1" max="5" name="question15"></p>
                </li>
+
               </ul>
      </fieldset>
+     <div class="semaforo_rojo">
+       <img src="http://placehold.it/780x250">
+     </div>
+      <div class="semaforo_amarillo">
+       <img src="http://placehold.it/780x250">
+     </div>
+      <div class="semaforo_verde">
+       <img src="http://placehold.it/780x250">
+     </div>
      <fieldset class="enviaresp">
           <div class="nextq">Siguiente</div>
           <input type="submit" value="Enviar respuestas" class="sansw" name="enviar"></fieldset>
 </form>
-
+<?php}?>
                 </div>
             </div>
         </div>
