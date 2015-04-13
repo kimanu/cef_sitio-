@@ -9,7 +9,7 @@ $(document).ready(function (){
 		});
 
 		if(invalid > 0) {
-			alert("Cambia mensaje para cuando los campos estén vacíos");
+			alert("Llene los campos vaciós para continuar");
 		} else {
 			$(".questions, .enviaresp").slideDown();
 		}
