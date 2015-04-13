@@ -9,7 +9,7 @@ $(document).ready(function (){
 		});
 
 		if(invalid > 0) {
-			alert("Llene los campos vaciós para continuar");
+			alert("Llene los campos vacios para continuar");
 		} else {
 			$(".questions, .enviaresp").slideDown();
 		}
