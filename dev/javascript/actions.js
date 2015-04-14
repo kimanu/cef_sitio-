@@ -1,3 +1,4 @@
+// Verifica si hay campos vacíos antes de mostrar el cuestionario
 $(document).ready(function (){
 	$(".validinfo").on("click", function(){
 		var invalid = 0;
@@ -15,3 +16,5 @@ $(document).ready(function (){
 		}
 	});
 });
+
+// Verifica los cambios en el último input del cuestionario, muestra una imagen

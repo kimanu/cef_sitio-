@@ -219,6 +219,6 @@
 
         <script src="js/main.min.js"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/diego.js"></script>
+        <script src="js/actions.js"></script>
     </body>
 </html>

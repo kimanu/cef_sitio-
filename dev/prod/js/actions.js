@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".validinfo").on("click",function(){var n=0;$(".cuestionario .bdata .emp-info").each(function(){""===$(this).val()&&n++}),n>0?alert("Llene los campos vacios para continuar"):$(".questions, .enviaresp").slideDown()})});
