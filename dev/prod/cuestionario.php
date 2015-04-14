@@ -25,7 +25,7 @@
                         <span class="blanco">FAMILIARES<br></span>
                         <span class="naranja">&amp; ASOCIADOS</span>
                     </div>
-                   
+                  
                 </div>
             </header>
             <nav class="main_nav">
@@ -43,54 +43,58 @@
                 </div>
             </nav>
              <?php
-                        if (isset($_POST['enviar'])) {
-                        $email = 'kim_kula@hotmail.com';
-                        /*$email = 'sinnerei@gmail.com';*/
-                        $subject = "Cuestionario";
-                        $mensaje.= 'Datos' . "\n\n";
-                        $mensaje.= 'Nombre de la empresa: ' . $_POST['empresa'] . "\n";
-                        $mensaje.= 'Nombre del participante: ' . $_POST['participante'] . "\n";
-                        $mensaje.= 'Cargo en la empresa: ' . $_POST['cargo'] . "\n";
-                        $mensaje.= 'Giro comercial: ' . $_POST['giro'] . "\n";
-                        $mensaje.= 'Domicilio: ' . $_POST['domicilio'] . "\n";
-                        $mensaje.= 'Número telefónico: ' . $_POST['tel'] . "\n";
-                        $mensaje.= 'Correo electrónico: ' . $_POST['mail'] . "\n";
-                        $mensaje.= "\n\n";
-                        $mensaje.= 'Respuestas del cuestionario' . "\n\n";
-                        $mensaje.= 'Pregunta 1: ' . $_POST['question1'] . "\n";
-                        $mensaje.= 'Pregunta 2: ' . $_POST['question2'] . "\n";
-                        $mensaje.= 'Pregunta 3: ' . $_POST['question3'] . "\n";
-                        $mensaje.= 'Pregunta 4: ' . $_POST['question4'] . "\n";
-                        $mensaje.= 'Pregunta 5: ' . $_POST['question5'] . "\n";
-                        $mensaje.= 'Pregunta 6: ' . $_POST['question6'] . "\n";
-                        $mensaje.= 'Pregunta 7: ' . $_POST['question7'] . "\n";
-                        $mensaje.= 'Pregunta 8: ' . $_POST['question8'] . "\n";
-                        $mensaje.= 'Pregunta 9: ' . $_POST['question9'] . "\n";
-                        $mensaje.= 'Pregunta 10: ' . $_POST['question10'] . "\n";
-                        $mensaje.= 'Pregunta 11: ' . $_POST['question11'] . "\n";
-                        $mensaje.= 'Pregunta 12: ' . $_POST['question12'] . "\n";
-                        $mensaje.= 'Pregunta 13: ' . $_POST['question13'] . "\n";
-                        $mensaje.= 'Pregunta 14: ' . $_POST['question14'] . "\n";
-                        $mensaje.= 'Pregunta 15: ' . $_POST['question15'] . "\n";
-                       
-
-                        $headers = 'De: '.$_POST['participante'];
-                        if (mail($email, $subject, $mensaje, $headers)) { ?>
-                        <script>
+if (isset($_POST['enviar'])) {
+    $email   = 'kim_kula@hotmail.com';
+    /*$email = 'sinnerei@gmail.com';*/
+    $subject = "Cuestionario";
+    $mensaje .= 'Datos' . "\n\n";
+    $mensaje .= 'Nombre de la empresa: ' . $_POST['empresa'] . "\n";
+    $mensaje .= 'Nombre del participante: ' . $_POST['participante'] . "\n";
+    $mensaje .= 'Cargo en la empresa: ' . $_POST['cargo'] . "\n";
+    $mensaje .= 'Giro comercial: ' . $_POST['giro'] . "\n";
+    $mensaje .= 'Domicilio: ' . $_POST['domicilio'] . "\n";
+    $mensaje .= 'Número telefónico: ' . $_POST['tel'] . "\n";
+    $mensaje .= 'Correo electrónico: ' . $_POST['mail'] . "\n";
+    $mensaje .= "\n\n";
+    $mensaje .= 'Respuestas del cuestionario' . "\n\n";
+    $mensaje .= 'Pregunta 1: ' . $_POST['question1'] . "\n";
+    $mensaje .= 'Pregunta 2: ' . $_POST['question2'] . "\n";
+    $mensaje .= 'Pregunta 3: ' . $_POST['question3'] . "\n";
+    $mensaje .= 'Pregunta 4: ' . $_POST['question4'] . "\n";
+    $mensaje .= 'Pregunta 5: ' . $_POST['question5'] . "\n";
+    $mensaje .= 'Pregunta 6: ' . $_POST['question6'] . "\n";
+    $mensaje .= 'Pregunta 7: ' . $_POST['question7'] . "\n";
+    $mensaje .= 'Pregunta 8: ' . $_POST['question8'] . "\n";
+    $mensaje .= 'Pregunta 9: ' . $_POST['question9'] . "\n";
+    $mensaje .= 'Pregunta 10: ' . $_POST['question10'] . "\n";
+    $mensaje .= 'Pregunta 11: ' . $_POST['question11'] . "\n";
+    $mensaje .= 'Pregunta 12: ' . $_POST['question12'] . "\n";
+    $mensaje .= 'Pregunta 13: ' . $_POST['question13'] . "\n";
+    $mensaje .= 'Pregunta 14: ' . $_POST['question14'] . "\n";
+    $mensaje .= 'Pregunta 15: ' . $_POST['question15'] . "\n";
+    
+    
+    $headers = 'De: ' . $_POST['participante'];
+    if (mail($email, $subject, $mensaje, $headers)) {
+?>
+                       <script>
                         function redireccionar() { document.location.href='cuestionario.php' }
                         alert ("Mensaje enviado");
                         setTimeout ('redireccionar()', 100);
                         </script>
-                        <?php }
-                        else { ?>
-                        <script>
+                        <?php
+    } else {
+?>
+                       <script>
                         function redireccionar() { document.location.href='cuestionario.php' }
                         alert ("El mensaje no pudo ser enviado");
                         setTimeout ('redireccionar()', 100);
                         </script>
-                        <?php }
-                    } else { ?>
-            <form class="cuestionario" name="datos" method="POST" action="">
+                        <?php
+    }
+} else {
+?>
+           <form class="cuestionario" name="datos" method="POST" action="">
      <fieldset class="bdata">
           <legend><h1>Datos de la empresa</h1></legend>
           <br>
@@ -209,8 +213,10 @@
           <div class="nextq">Siguiente</div>
           <input type="submit" value="Enviar respuestas" class="sansw" name="enviar"></fieldset>
 </form>
-<?php } ?>
-                </div>
+<?php
+}
+?>
+               </div>
             </div>
         </div>
         
