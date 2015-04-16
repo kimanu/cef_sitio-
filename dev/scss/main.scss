@@ -838,6 +838,7 @@ strong {
 .enviaresp {
   display: none;
 }
+
 //========================
 //boton siguiente
  .validinfo { 
@@ -845,8 +846,9 @@ strong {
   width: 60px;
   color: white;
 }
-  .semaforo_rojo{
-  background: #0040FF;
 
-
+//========================
+// Semáforos
+.semaforo_rojo, .semaforo_amarillo, .semaforo_verde {
+  display: none;
 }
