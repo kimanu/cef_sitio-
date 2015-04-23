@@ -30,7 +30,7 @@
             <li><a href="http://www.cef.mx/blog/"> Blog</a></li>
             <li><a href="servicios.html">Servicios</a>
             <li> <a href="contacto.php"> Contacto</a></li>
-            <li><a href="https://www.facebook.com/cef.consultoria?fref=ts" target="blank"><img src="img/fb.png" alt=""></a></li>
+            <li><a href="https://www.facebook.com/consultoriaef" target="blank"><img src="img/fb.png" alt=""></a></li>
             <li><a href="https://twitter.com/cef_mx" target="blank"><img src="img/tw.png" alt=""></a></li>
           </ul>
         </div>
@@ -110,7 +110,7 @@
             <p class="inst">
               Para evaluar el nivel de desarrollo de la Empresa Familiar, se plantean <strong>Quince preguntas</strong> divididas en tres temas, que califican de acuerdo a la percepción del empresario:
               <br><br>
-              <strong>Considerando 1 como el valor más bajo y 5 como el más alto.</strong>
+              <strong>1 Totalmente en desacuerdo 2 En desacuerdo 3 Indeciso 4 De acuerdo 5 Totalmente de acuerdo. </strong>
               <br><br>
               Es importante contestar con objetividad, ya que de lo contrario, no se obtendría información confiable.
             </p>
@@ -179,13 +179,13 @@
           </ul>
         </fieldset>
         <div class="semaforo_rojo">
-          <img src="http://placehold.it/780x250">
+          <img src="img/1.png">
         </div>
         <div class="semaforo_amarillo">
-          <img src="http://placehold.it/780x250">
+          <img src="img/2.png">
         </div>
         <div class="semaforo_verde">
-          <img src="http://placehold.it/780x250">
+          <img src="img/3.png">
         </div>
         <fieldset class="enviaresp">
           <div class="nextq">Siguiente</div>

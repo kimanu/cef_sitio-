@@ -34,7 +34,7 @@
                         <li><a href="http://www.cef.mx/blog/"> Blog</a></li>
                         <li><a href="servicios.html">Servicios</a>
                         <li> <a href="contacto.php"> Contacto</a></li>
-                        <li><a href="https://www.facebook.com/cef.consultoria?fref=ts" target="blank"><img src="img/fb.png" alt=""></a></li>
+                        <li><a href="https://www.facebook.com/consultoriaef" target="blank"><img src="img/fb.png" alt=""></a></li>
                         <li><a href="https://twitter.com/cef_mx" target="blank"><img src="img/tw.png" alt=""></a></li>
                     </ul>
                 </div>
